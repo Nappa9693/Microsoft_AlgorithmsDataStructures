@@ -1,4 +1,4 @@
-# Microsoft_AlgorithmsDataStructures
+# Microsoft Algorithms and Data Structures
 Repository for my solutions to Microsoft Algorithms Data Structures course on edX. Solutions were developed using Linux and Dotnetcore.
 
 To build/run the solutions you will need the following:
