@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Utils;
 
 // This is for Topic 1 Bubble Sort and provides a small console application
 // to demonstrate the Bubble sort algorithm.
-// Note: I decided to take a slightly functional style with the code as evidenced by the ReadOnlyCollections
-// to prevent mutation when passing references into a method.
 namespace BubbleSort
 {
     class Program
@@ -14,23 +13,9 @@ namespace BubbleSort
 
         static void Main(string[] args)
         {
-            try
-            {
-                int numberCount = PromptUserForNumber("Enter the how many numbers that will be sorted:");
-                ReadOnlyCollection<int> originalNumbers = BuildNumbersArray(numberCount);
-                ReadOnlyCollection<int> sortedNumbers = PerformBubbleSort(originalNumbers);
-                
-                OutputNumbers("Before: ", originalNumbers);
-                OutputNumbers("After: ", sortedNumbers);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error occurred: {ex.Message}");
-                Console.WriteLine(ex.StackTrace);
-            }
-
-            Console.WriteLine("Press any key to quit the application.");
-            Console.ReadLine();
+            var consoleInputOutputHandler = new ConsoleInputOutputHandler(MAX_INPUT_TRIES);
+            var simpleApp = new SimpleApplication(consoleInputOutputHandler);
+            simpleApp.Run(PerformBubbleSort);
         }
 
         static ReadOnlyCollection<int> PerformBubbleSort(ReadOnlyCollection<int> nums)
@@ -72,48 +57,6 @@ namespace BubbleSort
             } while (swapped == true);
 
             return Array.AsReadOnly<int>(numbers);
-        }
-
-        static int PromptUserForNumber(string message, int tries = 1)
-        {
-            try
-            {
-                Console.WriteLine(message);
-                string input = Console.ReadLine();
-                return int.Parse(input);
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Please enter a valid number.");
-            }
-
-            if (tries >= MAX_INPUT_TRIES)
-            {
-                throw new Exception("Too many invalid input attempts.");
-            }
-
-            return PromptUserForNumber(message, tries + 1);
-        }
-
-        static ReadOnlyCollection<int> BuildNumbersArray(int numberCount)
-        {
-            int[] numbersArray = new int[numberCount];
-            for (int i = 0; i < numberCount; i++)
-            {
-                int number = PromptUserForNumber("Please enter a number:");
-                numbersArray[i] = number;
-            }
-
-            return Array.AsReadOnly<int>(numbersArray);
-        }
-
-        static void OutputNumbers(string preText, ReadOnlyCollection<int> numbers){
-            Console.Write(preText);
-            for (int i = 0; i < numbers.Count; i++)
-            {
-                Console.Write("{0}, ", numbers[i]);
-            }
-            Console.WriteLine();
         }
     }
 }

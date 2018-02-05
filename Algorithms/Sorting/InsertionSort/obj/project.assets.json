@@ -686,11 +686,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Algorithms/Sorting/BubbleSort/BubbleSort.csproj",
-      "projectName": "BubbleSort",
-      "projectPath": "/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Algorithms/Sorting/BubbleSort/BubbleSort.csproj",
+      "projectUniqueName": "/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Algorithms/Sorting/InsertionSort/InsertionSort.csproj",
+      "projectName": "InsertionSort",
+      "projectPath": "/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Algorithms/Sorting/InsertionSort/InsertionSort.csproj",
       "packagesPath": "/home/nappa9693/.nuget/packages/",
-      "outputPath": "/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Algorithms/Sorting/BubbleSort/obj/",
+      "outputPath": "/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Algorithms/Sorting/InsertionSort/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
