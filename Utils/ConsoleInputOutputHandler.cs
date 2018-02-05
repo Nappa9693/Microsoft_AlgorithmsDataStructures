@@ -54,5 +54,13 @@ namespace Utils
             }
             Console.WriteLine();
         }
+
+        public string ReadInput(){
+            return Console.ReadLine();
+        }
+
+        public void Output(string message){
+            Console.WriteLine(message);
+        }
     }
 }

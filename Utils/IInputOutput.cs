@@ -13,5 +13,9 @@ namespace Utils{
         ReadOnlyCollection<int> BuildNumbersArray(int numberCount);
 
         void OutputNumbers(string preText, ReadOnlyCollection<int> numbers);
+
+        string ReadInput();
+
+        void Output(string message);
     }
 }

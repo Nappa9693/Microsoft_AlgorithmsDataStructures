@@ -25,11 +25,11 @@ namespace Utils{
                 inputOutputHandler.OutputNumbers("Before: ", originalNumbers);
                 inputOutputHandler.OutputNumbers("After: ", sortedNumbers);
             }catch(Exception ex){
-                Console.WriteLine($"Error occurred {ex.Message}");
+                inputOutputHandler.Output($"Error occurred {ex.Message}");
             }
 
-            Console.WriteLine("Press any key to quit the application.");
-            Console.ReadLine();
+            inputOutputHandler.Output("Press any key to quit the application.");
+            inputOutputHandler.ReadInput();
         }
     }
 }

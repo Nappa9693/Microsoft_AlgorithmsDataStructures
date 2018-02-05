@@ -1,8 +1,0 @@
-/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Utils/bin/Debug/netstandard2.0/Utils.deps.json
-/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Utils/bin/Debug/netstandard2.0/Utils.dll
-/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Utils/bin/Debug/netstandard2.0/Utils.pdb
-/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Utils/obj/Debug/netstandard2.0/Utils.csproj.CoreCompileInputs.cache
-/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Utils/obj/Debug/netstandard2.0/Utils.AssemblyInfoInputs.cache
-/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Utils/obj/Debug/netstandard2.0/Utils.AssemblyInfo.cs
-/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Utils/obj/Debug/netstandard2.0/Utils.dll
-/home/nappa9693/dotnet_projects/edx_learning/Microsoft_AlgorithmsDataStructures/Utils/obj/Debug/netstandard2.0/Utils.pdb
