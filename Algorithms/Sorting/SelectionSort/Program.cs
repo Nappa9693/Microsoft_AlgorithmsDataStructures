@@ -19,8 +19,8 @@ namespace SelectionSort
         static void Main(string[] args)
         {
             var consoleInputOutputHandler = new ConsoleInputOutputHandler(MAX_INPUT_TRIES);
-            var simpleApp = new SimpleApplication(consoleInputOutputHandler);
-            simpleApp.Run(PerformSelectionSort);
+            var simpleApp = new SortApplication(consoleInputOutputHandler);
+            simpleApp.RunSort(PerformSelectionSort);
         }
 
         static ReadOnlyCollection<int> PerformSelectionSort(ReadOnlyCollection<int> nums){

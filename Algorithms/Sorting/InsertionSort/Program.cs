@@ -12,8 +12,8 @@ namespace InsertionSort
         static void Main(string[] args)
         {
             var consoleInputOutputHandler = new ConsoleInputOutputHandler(MAX_INPUT_TRIES);
-            var simpleApp = new SimpleApplication(consoleInputOutputHandler);
-            simpleApp.Run(DoInsertionSort);
+            var simpleApp = new SortApplication(consoleInputOutputHandler);
+            simpleApp.RunSort(DoInsertionSort);
         }
 
         static ReadOnlyCollection<int> DoInsertionSort(ReadOnlyCollection<int> data){

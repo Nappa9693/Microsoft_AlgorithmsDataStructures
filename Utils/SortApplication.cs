@@ -9,14 +9,14 @@ namespace Utils{
     /// that handles prompting the user, gathering the needed input, and running the 
     /// the given action and outputing the results.
     ///</summary>
-    public class SimpleApplication{
+    public class SortApplication{
         private IInputOutput inputOutputHandler;
 
-        public SimpleApplication(IInputOutput inputOutputHandler){
+        public SortApplication(IInputOutput inputOutputHandler){
             this.inputOutputHandler = inputOutputHandler;
         }
 
-        public void Run(Func<ReadOnlyCollection<int>, ReadOnlyCollection<int>> action){
+        public void RunSort(Func<ReadOnlyCollection<int>, ReadOnlyCollection<int>> action){
             try{
                 int numberCount = inputOutputHandler.PromptUserForNumber("Enter the how many numbers that will be sorted:");
                 ReadOnlyCollection<int> originalNumbers = inputOutputHandler.BuildNumbersArray(numberCount);

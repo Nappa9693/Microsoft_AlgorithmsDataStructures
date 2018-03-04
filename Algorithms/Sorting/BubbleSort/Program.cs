@@ -14,8 +14,8 @@ namespace BubbleSort
         static void Main(string[] args)
         {
             var consoleInputOutputHandler = new ConsoleInputOutputHandler(MAX_INPUT_TRIES);
-            var simpleApp = new SimpleApplication(consoleInputOutputHandler);
-            simpleApp.Run(PerformBubbleSort);
+            var simpleApp = new SortApplication(consoleInputOutputHandler);
+            simpleApp.RunSort(PerformBubbleSort);
         }
 
         static ReadOnlyCollection<int> PerformBubbleSort(ReadOnlyCollection<int> nums)
