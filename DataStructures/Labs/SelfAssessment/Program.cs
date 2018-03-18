@@ -18,6 +18,9 @@ namespace SelfAssessment
 
             Console.WriteLine("Maximum difference assessment results:");
             MaxDifference();
+
+            Console.WriteLine("Depth Of Nesting results:");
+            DepthOfNesting();
         }
 
         static void AverageOfNumbersAssessment(){
@@ -67,6 +70,44 @@ namespace SelfAssessment
             var largest = sample[sample.Length - 1];
 
             Console.WriteLine(largest - smallest);
+        }
+
+        static void DepthOfNesting(){
+            string example1 = "a(())b()";
+
+            int openParenthesisCount = example1.Count(letter => letter == '(');
+            int closeParenthesisCount = example1.Count(letter => letter == ')');
+
+            // Check the open and close parenthesis count. if they
+            // are not equal we have an unmatched parenthesis.
+            // Note: This is the first phase of mismatch checking.
+            if(openParenthesisCount != closeParenthesisCount){
+                Console.WriteLine("0");
+                return;
+            }
+
+            int highestDepthCount = 0;
+            int currentDepthCount = 0;
+            foreach(char letter in example1){
+                if(letter == '('){
+                    currentDepthCount++;
+                }else if(letter == ')'){
+                    // if the current depth count is zero or below
+                    // then we have a mismatched closed parenthesis.
+                    if(currentDepthCount <= 0){
+                        Console.WriteLine("0");
+                        return;
+                    }else{
+                        currentDepthCount--;
+                    }
+                }
+
+                if(highestDepthCount < currentDepthCount){
+                    highestDepthCount = currentDepthCount;
+                }
+            }
+
+            Console.WriteLine(highestDepthCount);
         }
     }
 }
