@@ -50,6 +50,8 @@ namespace TutorialLabOne
 
                 // Throws exception because you cannot sort objects
                 // which is what the values are stored as.
+                // Also sorting will fail when dealing with 
+                // lists of different types.
                 myArrList.Sort();
             }catch(Exception ex){
                 Console.WriteLine($"Error: {ex.Message}");
